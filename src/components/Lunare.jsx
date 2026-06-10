@@ -635,15 +635,15 @@ export const Lunare = () => {
       </section>
       <section aria-label="Branding overview">
         <div className="absolute top-[1569px] left-20 w-[734px] h-[134px] flex flex-col gap-10">
-          <h2 className="w-[162px] h-[38px] [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#664a64] text-[32px] tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
+          <h2 className="w-[162px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#664a64] text-[22px] tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
             BRANDING
           </h2>
-          <p className="w-[730px] h-14 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-xl tracking-[0] leading-[26.0px] gsap-text">
+          <p className="w-[730px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px] gsap-text">
             <span className="text-[#222222]">
               빛을 과하게 드러내는 하이라이터가 아닌 피부 위에 자연스럽게
               스며드는 광채에 집중했습니다. LUNARÉ는{" "}
             </span>
-            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#674a64] text-[22px] leading-[28.6px]">
+            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#674a64] text-[16px] leading-[24px]">
               달빛의 잔상처럼 조용하지만 오래 남는 빛
             </span>
             <span className="text-[#222222]">을 표현합니다.</span>
@@ -652,12 +652,12 @@ export const Lunare = () => {
         <div className="flex flex-col w-[1070px] h-[210px] items-start justify-between absolute top-[1809px] left-[248px] gsap-stagger">
           <div className="relative w-[835px] h-[52px]">
             <div className="absolute top-3 left-0 w-48 h-[29px] flex gap-5">
-              <div className="w-[111px] h-[29px] [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#222222] text-2xl tracking-[0] leading-[normal]">
+              <div className="w-[111px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#222222] text-base tracking-[0] leading-[normal]">
                 PROBLEM
               </div>
               <div className="mt-3.5 w-10" aria-hidden="true" style={{ borderTop: "0.5px dashed #aaaaaa" }} />
             </div>
-            <p className="absolute top-0 left-[212px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#666666] text-xl tracking-[0] leading-[26.0px]">
+            <p className="absolute top-0 left-[212px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#666666] text-sm tracking-[0] leading-[22px]">
               하이라이터 시장은 화려하고 과장된 광 표현에 집중되어 있습니다.
               <br />
               반면 소비자들은 피부 본연의 결을 살리는 자연스러운 광채를 선호하고
@@ -666,12 +666,12 @@ export const Lunare = () => {
           </div>
           <div className="relative w-[1072px] h-[78px] mr-[-2.00px]">
             <div className="absolute top-6 left-0 w-[194px] h-[29px] flex gap-5">
-              <div className="w-[113px] h-[29px] [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#222222] text-2xl tracking-[0] leading-[normal]">
+              <div className="w-[113px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#222222] text-base tracking-[0] leading-[normal]">
                 SOLUTON
               </div>
               <div className="mt-3.5 w-10" aria-hidden="true" style={{ borderTop: "0.5px dashed #aaaaaa" }} />
             </div>
-            <p className="absolute top-0 left-[214px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-xl tracking-[0] leading-[26.0px]">
+            <p className="absolute top-0 left-[214px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[22px]">
               <span className="text-[#9f6a6a]">
                 &#39;A Quiet Glow Inspired by Moonlight&#39;
               </span>
@@ -709,7 +709,7 @@ export const Lunare = () => {
                   {step.step}
                 </div>
                 <div
-                  className="w-fit h-[29px] [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#1a1a1a] text-2xl tracking-[0.04em] leading-[normal] whitespace-nowrap"
+                  className="w-fit [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#1a1a1a] text-lg tracking-[0.04em] leading-[normal] whitespace-nowrap"
                 >
                   {step.title}
                 </div>
