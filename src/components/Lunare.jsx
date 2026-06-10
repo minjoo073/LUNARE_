@@ -1033,30 +1033,24 @@ export const Lunare = () => {
         {mainPageNotes.map((note) => (
           <article
             key={note.number}
-            className={`absolute ${note.top} ${note.left} ${note.width} ${note.number === "01" ? "h-32" : note.number === "05" ? "h-[88px]" : "h-[92px]"} gsap-text`}
+            className={`absolute ${note.top} ${note.left} ${note.width} gsap-text`}
           >
-            <div className={note.dotBoxClass}>
-              <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
-              <div
-                className="absolute top-[5px] left-2.5 w-[47px]"
-                aria-hidden="true"
-                style={{ borderTop: "0.5px dashed #907e9e" }}
-              />
-              {note.extra}
+            <div className="flex items-center">
+              <div className="relative flex items-center shrink-0">
+                <div className="w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid shrink-0" />
+                <div className="w-[47px] shrink-0" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
+                {note.extra}
+              </div>
+              <div className="flex flex-col ml-[11px]">
+                <span className="[font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-tight">
+                  {note.number}
+                </span>
+                <span className="[font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-tight whitespace-nowrap">
+                  {note.title}
+                </span>
+              </div>
             </div>
-            <div
-              className={`top-0 ${note.numberLeft} [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]`}
-            >
-              {note.number}
-            </div>
-            <div
-              className={`absolute top-${note.number === "01" ? "[13px]" : "0"} ${note.titleLeft} [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap`}
-            >
-              {note.title}
-            </div>
-            <p
-              className={`absolute ${note.bodyTop} ${note.bodyLeft} [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-lg tracking-[0] ${note.number === "04" || note.number === "05" ? "leading-[normal]" : "leading-[23.4px]"}`}
-            >
+            <p className={`absolute ${note.bodyTop} ${note.bodyLeft} [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]`}>
               {note.body}
             </p>
           </article>
