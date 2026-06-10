@@ -430,7 +430,7 @@ const mainPageNotes = [
     ),
     line: line3794,
     connectorWidth: "w-[57px]",
-    bodyLeft: "left-[65px]",
+    bodyLeft: "left-[68px]",
     bodyTop: "top-[46px]",
   },
   {
@@ -447,7 +447,7 @@ const mainPageNotes = [
     ),
     line: line3795,
     connectorWidth: "w-[57px]",
-    bodyLeft: "left-[67px]",
+    bodyLeft: "left-[68px]",
     bodyTop: "top-[46px]",
   },
   {
@@ -467,7 +467,7 @@ const mainPageNotes = [
     ),
     line: line3792,
     connectorWidth: "w-[57px]",
-    bodyLeft: "left-[67px]",
+    bodyLeft: "left-[68px]",
     bodyTop: "top-[46px]",
   },
   {
@@ -485,7 +485,7 @@ const mainPageNotes = [
     ),
     line: line379,
     connectorWidth: "w-[57px]",
-    bodyLeft: "left-[67px]",
+    bodyLeft: "left-[68px]",
     bodyTop: "top-[46px]",
   },
 ];
@@ -682,7 +682,9 @@ export const Lunare = () => {
           <p className="w-[730px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-base tracking-[0] leading-[26px] gsap-text">
             <span className="text-[#222222]">
               빛을 과하게 드러내는 하이라이터가 아닌 피부 위에 자연스럽게
-              스며드는 광채에 집중했습니다. LUNARÉ는{" "}
+              스며드는 광채에 집중했습니다.
+              <br />
+              LUNARÉ는{" "}
             </span>
             <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#674a64] text-[17px] leading-[26px]">
               달빛의 잔상처럼 조용하지만 오래 남는 빛
@@ -702,7 +704,7 @@ export const Lunare = () => {
               하이라이터 시장은 화려하고 과장된 광 표현에 집중되어 있습니다.
               <br />
               반면 소비자들은{" "}
-              <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+              <span className="[font-family:'Pretendard-Bold',Helvetica] font-bold text-[#7e5a68]">
                 피부 본연의 결을 살리는 자연스러운 광채
               </span>
               를 선호하고 있습니다.
@@ -716,13 +718,13 @@ export const Lunare = () => {
               <div className="mt-3.5 w-10" aria-hidden="true" style={{ borderTop: "0.5px dashed #aaaaaa" }} />
             </div>
             <p className="absolute top-0 left-[214px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px]">
-              <span className="text-[#9f6a6a]">
+              <span className="[font-family:'Pretendard-Medium',Helvetica] font-medium text-[#7e5a68]">
                 &#39;A Quiet Glow Inspired by Moonlight&#39;
               </span>
               <span className="text-[#666666]">
                 라는 브랜드 철학을 바탕으로
                 <br />
-                <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+                <span className="[font-family:'Pretendard-Bold',Helvetica] font-bold text-[#7e5a68]">
                   달빛이 피부 위에 남기는 은은한 빛의 잔상
                 </span>
                 을 시각화했습니다.
@@ -792,7 +794,7 @@ export const Lunare = () => {
           <div className="relative w-[796px] h-[106px] mr-[-4.00px]">
             <p className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-base tracking-[0] leading-[26px]">
               <span className="text-[#222222]">LUNARÉ는 </span>
-              <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#9f6a6a]">
+              <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
                 Lunar(달)와 Éclat(광채)
               </span>
               <span className="text-[#222222]">
@@ -802,13 +804,13 @@ export const Lunare = () => {
             <p className="absolute top-[40px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px]">
               <span className="text-[#666666]">
                 달빛이 남기는 은은한 잔상에서 영감을 받아,{" "}
-                <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+                <span className="[font-family:'Pretendard-Bold',Helvetica] font-bold text-[#7e5a68]">
                   피부 위에 자연스럽게 스며드는 광채
                 </span>
                 를 표현하고자 하였습니다. 브랜드의 컬러 시스템, 비주얼 디렉션,
                 제품 경험 전반은{" "}
               </span>
-              <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#9f6a6a]">
+              <span className="[font-family:'Pretendard-Medium',Helvetica] font-medium text-[#7e5a68]">
                 &apos;Quiet Glow&apos;
               </span>
               <span className="text-[#666666]">
@@ -1090,7 +1092,7 @@ export const Lunare = () => {
           >
             {note.number === "01" ? (
               <div className="relative h-[52px]">
-                <div className="absolute top-[6px] left-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid" />
+                <div className="absolute top-[6px] left-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]" />
                 <div className="absolute top-[11px] left-[11px] w-[44px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
                 <div className="absolute top-[11px] left-[55px] h-[21px]" aria-hidden="true" style={{ borderLeft: "0.5px dashed #907e9e" }} />
                 <div className="absolute top-[32px] left-[55px] w-[26px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
@@ -1104,7 +1106,7 @@ export const Lunare = () => {
             ) : (
               <div className="flex items-center">
                 <div className="relative flex items-center shrink-0">
-                  <div className="w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid shrink-0" />
+                  <div className="w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] shrink-0" />
                   <div className={`${note.connectorWidth} shrink-0`} aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
                   {note.extra}
                 </div>
@@ -1140,13 +1142,20 @@ export const Lunare = () => {
             src={iphone16}
           />
         </div>
-        <div className="absolute top-[11986px] left-[1247px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#888888] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
+        <div
+          className="absolute [font-family:'Pretendard-Light',Helvetica] font-light text-[#888888] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap"
+          style={
+            isNarrowViewport
+              ? { top: "11890px", left: "1272px" }
+              : { top: "11986px", left: "1247px" }
+          }
+        >
           모바일 ver.
         </div>
         <article className="absolute top-[11288px] left-[1034px] w-[341px] h-[115px] gsap-text">
           {/* dot: top-1.5(6px), line center: 11px → number top: 5px, title top: 5+12+15=32px, text left: 58+10=68px */}
           <div className="absolute top-1.5 left-0 w-[57px] h-[11px]">
-            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
+            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[47px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[5px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">01</div>
@@ -1162,7 +1171,7 @@ export const Lunare = () => {
         <article className="absolute top-[11374px] left-20 w-[293px] h-[115px] gsap-text">
           {/* line on right (rotated), line center: 12px → number top: 6px, title top: 6+12+15=33px, text right edge: 182-10=172px */}
           <div className="absolute top-[7px] left-[182px] w-[105px] h-[11px] rotate-[-180.00deg]">
-            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
+            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[95px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[6px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
@@ -1178,7 +1187,7 @@ export const Lunare = () => {
         <article className="absolute top-[11566px] left-[1034px] w-[355px] h-[115px] gsap-text">
           {/* dot: top-1.5(6px), line center: 11px → number top: 5px, title top: 32px, text left: 68px */}
           <div className="absolute top-1.5 left-0 w-[57px] h-[11px]">
-            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
+            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[47px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[5px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">03</div>
@@ -1186,37 +1195,6 @@ export const Lunare = () => {
           <p className="absolute top-[62px] left-[68px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             제품의 이미지와 주요 정보를<br />일관된 그리드로 배치하여<br />브랜드의 무드와 가독성을 강화했습니다.
           </p>
-        </article>
-        <article
-          className="absolute w-[166px] h-[91px] gsap-text"
-          style={
-            isNarrowViewport
-              ? { top: "12890px", left: "1149px" }
-              : { top: "11929px", left: "1138px" }
-          }
-        >
-          {/* vertical line → number top: 0, title top: 12+15=27px */}
-          <div className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">04</div>
-          <div
-            className="absolute left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap"
-            style={{ top: isNarrowViewport ? "10px" : "27px" }}
-          >
-            반응형 디자인
-          </div>
-          <div
-            className="absolute left-[13px] overflow-visible"
-            aria-hidden="true"
-            style={{ top: isNarrowViewport ? "40px" : "32px" }}
-          >
-            <div
-              className="absolute top-0 left-0"
-              style={{ borderLeft: "0.5px dashed #907e9e", height: isNarrowViewport ? "20px" : "40px" }}
-            />
-            <div
-              className="absolute left-[-5px] w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]"
-              style={{ top: isNarrowViewport ? "15px" : "35px" }}
-            />
-          </div>
         </article>
       </section>
       <section aria-label="Detail page showcase">
@@ -1231,12 +1209,12 @@ export const Lunare = () => {
         <article className="absolute top-[13605px] left-[343px] w-[328px] h-[92px] gsap-text">
           {/* 오른쪽에서 왼쪽 선, line center y=12px, 선 왼쪽끝 172px → text right≤162px, left-0 기준 */}
           <div className="absolute top-[7px] left-[172px] w-[150px] h-[11px] rotate-[-180.00deg]">
-            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
+            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[140px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
-          <div className="absolute top-[6px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">01</div>
-          <div className="absolute top-[33px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">제품 상세 정보</div>
-          <p className="absolute top-[63px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
+          <div className="absolute top-[8px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">01</div>
+          <div className="absolute top-[2px] left-[38px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">제품 상세 정보</div>
+          <p className="absolute top-[36px] left-[38px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             제품 이미지와 핵심 정보를 깔끔하게 배치하여<br />
             <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
               한눈에 이해
@@ -1247,13 +1225,13 @@ export const Lunare = () => {
         <article className="absolute top-[13927px] left-[391px] w-[295px] h-[141px] gsap-text">
           {/* 수직+수평 꺾임선, 텍스트 왼쪽 정렬, number top-[44px] → title top-[71px] */}
           <div className="absolute top-px left-[87px] w-[202px] h-[41px] rotate-[-180.00deg]">
-            <div className="absolute top-[30px] left-px w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid" />
+            <div className="absolute top-[30px] left-px w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]" />
             <div className="absolute top-[35px] left-2.5 w-48" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
             <div className="absolute top-0 left-[202px] h-[37px]" aria-hidden="true" style={{ borderLeft: "0.5px dashed #907e9e" }} />
           </div>
-          <div className="absolute top-[44px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
-          <div className="absolute top-[71px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">텍스처</div>
-          <p className="absolute top-[101px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
+          <div className="absolute top-[46px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
+          <div className="absolute top-[40px] left-[38px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">텍스처</div>
+          <p className="absolute top-[74px] left-[38px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             실제 발색 이미지와 텍스처를 제공하여<br />제품의 특성을 직관적으로 전달합니다.
           </p>
         </article>
@@ -1264,9 +1242,9 @@ export const Lunare = () => {
             <div className="absolute top-[11px] left-[5px] h-[43px]" style={{ borderLeft: "0.5px dashed #907e9e" }} />
             <div className="absolute top-[54px] left-[5px] w-[55px]" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
-          <div className="absolute top-[51px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">03</div>
-          <div className="absolute top-[78px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">연관 제품 추천</div>
-          <p className="absolute top-[108px] left-[67px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
+          <div className="absolute top-[53px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">03</div>
+          <div className="absolute top-[47px] left-[105px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">연관 제품 추천</div>
+          <p className="absolute top-[81px] left-[105px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             유사 제품을 함께 노출하여<br />사용자의 선택을 돕고 쇼핑 경험을 확장합니다.
           </p>
         </article>
