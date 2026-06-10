@@ -1,26 +1,27 @@
-import mainPage from "../assets/images/main_page.png";
-import bg1 from "../assets/images/bg-1.png";
-import bg2 from "../assets/images/bg-2.png";
-import brandConcept from "../assets/images/brand_concept.png";
-import branding1 from "../assets/images/branding_1.png";
-import detail01 from "../assets/images/detail-01.png";
-import detailBg from "../assets/images/detail-bg.png";
-import detailPage from "../assets/images/detail_page.png";
-import endingImg from "../assets/images/ending-img.png";
-import engingMockup from "../assets/images/enging_mockup.png";
-import fullImg01 from "../assets/images/full-img01.png";
-import heroLeft from "../assets/images/hero_left.png";
-import heroLeft2 from "../assets/images/hero-left-2.png";
-import heroRight from "../assets/images/hero_right.png";
-import heroRight2 from "../assets/images/hero-right-2.png";
-import image from "../assets/images/image.png";
+import { useEffect, useState } from "react";
+import mainPage from "../assets/images/main_page.webp";
+import bg1 from "../assets/images/bg-1.webp";
+import bg2 from "../assets/images/bg-2.webp";
+import brandConcept from "../assets/images/brand_concept.webp";
+import branding1 from "../assets/images/branding_1.webp";
+import detail01 from "../assets/images/detail-01.webp";
+import detailBg from "../assets/images/detail-bg.webp";
+import detailPage from "../assets/images/detail_page.webp";
+import endingImg from "../assets/images/ending-img.webp";
+import engingMockup from "../assets/images/enging_mockup.webp";
+import fullImg01 from "../assets/images/full-img01.webp";
+import heroLeft from "../assets/images/hero_left.webp";
+import heroLeft2 from "../assets/images/hero-left-2.webp";
+import heroRight from "../assets/images/hero_right.webp";
+import heroRight2 from "../assets/images/hero-right-2.webp";
+import image from "../assets/images/image.webp";
 import image1 from "../assets/images/image.svg";
-import image884 from "../assets/images/logo_black.png";
-import iphone16 from "../assets/images/mobile_shop_page.png";
-import item1 from "../assets/images/item-1.png";
-import item2 from "../assets/images/item-2.png";
-import item3 from "../assets/images/item-3.png";
-import item4 from "../assets/images/item-4.png";
+import image884 from "../assets/images/logo_black.webp";
+import iphone16 from "../assets/images/mobile_shop_page.webp";
+import item1 from "../assets/images/item-1.webp";
+import item2 from "../assets/images/item-2.webp";
+import item3 from "../assets/images/item-3.webp";
+import item4 from "../assets/images/item-4.webp";
 import line354 from "../assets/images/line-354.svg";
 import line355 from "../assets/images/line-355.svg";
 import line356 from "../assets/images/line-356.svg";
@@ -59,24 +60,24 @@ import line3804 from "../assets/images/line-380-4.svg";
 import line3805 from "../assets/images/line-380-5.svg";
 import line381 from "../assets/images/line-381.svg";
 import line383 from "../assets/images/line-383.svg";
-import loginPage1 from "../assets/images/login_page1.png";
-import loginPage2 from "../assets/images/login_page2.png";
-import logoImg from "../assets/images/logo_img.png";
-import logoImg2 from "../assets/images/logo-img-2.png";
-import mckrup1 from "../assets/images/Group 16734.png";
-import moodboard1 from "../assets/images/moodboard1.png";
-import moodboard2 from "../assets/images/moodboard2.png";
-import moodboard3 from "../assets/images/moodboard3.png";
-import moodboard4 from "../assets/images/moodboard4.png";
-import nameBg1 from "../assets/images/name-bg1.png";
+import loginPage1 from "../assets/images/login_page1.webp";
+import loginPage2 from "../assets/images/login_page2.webp";
+import logoImg from "../assets/images/logo_img.webp";
+import logoImg2 from "../assets/images/logo-img-2.webp";
+import mckrup1 from "../assets/images/Group 16734.webp";
+import moodboard1 from "../assets/images/moodboard1.webp";
+import moodboard2 from "../assets/images/moodboard2.webp";
+import moodboard3 from "../assets/images/moodboard3.webp";
+import moodboard4 from "../assets/images/moodboard4.webp";
+import nameBg1 from "../assets/images/name-bg1.webp";
 import screencaptureMinjoo073GithubIoLunare202606060249181 from "../assets/images/screencapture-minjoo073-github-io-LUNARE-2026-06-06-02-49-18-1.png";
 import screencaptureMinjoo073GithubIoLunare202606060249182 from "../assets/images/screencapture-minjoo073-github-io-LUNARE-2026-06-06-02-49-18-2.png";
-import sectionLeft from "../assets/images/section_left.png";
-import sectionRight from "../assets/images/section_right.png";
-import section01Right1 from "../assets/images/section01-right1.png";
-import shopPage from "../assets/images/shop_page.png";
-import smallLogo from "../assets/images/small-logo.png";
-import wireframe from "../assets/images/wireframe.png";
+import sectionLeft from "../assets/images/section_left.webp";
+import sectionRight from "../assets/images/section_right.webp";
+import section01Right1 from "../assets/images/section01-right1.webp";
+import shopPage from "../assets/images/shop_page.webp";
+import smallLogo from "../assets/images/small-logo.webp";
+import wireframe from "../assets/images/wireframe.webp";
 
 const portfolioMeta = [
   {
@@ -409,9 +410,7 @@ const mainPageNotes = [
         <div className="absolute top-6 left-[55px] w-[26px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
       </>
     ),
-    dotBoxClass: "absolute top-0 left-0 w-[81px] h-[26px]",
-    titleLeft: "left-[132px]",
-    numberLeft: "left-[89px]",
+    connectorWidth: "w-[81px]",
     bodyLeft: "left-[87px]",
     bodyTop: "top-[59px]",
   },
@@ -430,9 +429,7 @@ const mainPageNotes = [
       </>
     ),
     line: line3794,
-    dotBoxClass: "absolute top-2 left-0 w-[57px] h-[11px]",
-    titleLeft: "left-28",
-    numberLeft: "left-[65px]",
+    connectorWidth: "w-[57px]",
     bodyLeft: "left-[65px]",
     bodyTop: "top-[46px]",
   },
@@ -449,9 +446,7 @@ const mainPageNotes = [
       </>
     ),
     line: line3795,
-    dotBoxClass: "absolute top-[7px] left-0 w-[57px] h-[11px]",
-    titleLeft: "left-28",
-    numberLeft: "left-[65px]",
+    connectorWidth: "w-[57px]",
     bodyLeft: "left-[67px]",
     bodyTop: "top-[46px]",
   },
@@ -471,9 +466,7 @@ const mainPageNotes = [
       </>
     ),
     line: line3792,
-    dotBoxClass: "absolute top-[7px] left-0 w-[57px] h-[11px]",
-    titleLeft: "left-28",
-    numberLeft: "left-[65px]",
+    connectorWidth: "w-[57px]",
     bodyLeft: "left-[67px]",
     bodyTop: "top-[46px]",
   },
@@ -491,9 +484,7 @@ const mainPageNotes = [
       </>
     ),
     line: line379,
-    dotBoxClass: "absolute top-1.5 left-0 w-[57px] h-[11px]",
-    titleLeft: "left-28",
-    numberLeft: "left-[65px]",
+    connectorWidth: "w-[57px]",
     bodyLeft: "left-[67px]",
     bodyTop: "top-[46px]",
   },
@@ -501,13 +492,63 @@ const mainPageNotes = [
 
 import { usePortfolioAnimations } from "../hooks/usePortfolioAnimations";
 
+const PORTFOLIO_BASE_WIDTH = 1440;
+const PORTFOLIO_BASE_HEIGHT = 16849;
+const PORTFOLIO_MAX_SCALE = 1920 / PORTFOLIO_BASE_WIDTH;
+
+function getPortfolioScale() {
+  if (typeof window === "undefined") {
+    return 1;
+  }
+
+  return Math.min(window.innerWidth / PORTFOLIO_BASE_WIDTH, PORTFOLIO_MAX_SCALE);
+}
+
+function getIsNarrowViewport() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  return window.innerWidth <= 768;
+}
+
 export const Lunare = () => {
+  const [portfolioScale, setPortfolioScale] = useState(getPortfolioScale);
+  const [isNarrowViewport, setIsNarrowViewport] = useState(getIsNarrowViewport);
+
   usePortfolioAnimations();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setPortfolioScale(getPortfolioScale());
+      setIsNarrowViewport(getIsNarrowViewport());
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div style={{ width: "1920px", minHeight: "22465px", overflow: "hidden" }}>
+    <div
+      style={{
+        width: `${PORTFOLIO_BASE_WIDTH * portfolioScale}px`,
+        minHeight: `${PORTFOLIO_BASE_HEIGHT * portfolioScale}px`,
+        margin: "0 auto",
+        overflow: "hidden",
+        position: "relative",
+      }}
+    >
     <main
       className="bg-white overflow-hidden min-w-[1440px] min-h-[16849px] relative"
-      style={{ width: "1440px", transform: "scale(1.3333)", transformOrigin: "top left" }}
+      style={{
+        width: `${PORTFOLIO_BASE_WIDTH}px`,
+        transform: `scale(${portfolioScale})`,
+        transformOrigin: "top left",
+      }}
       aria-label="LUNARÉ portfolio presentation"
     >
       <h1 className="sr-only">LUNARÉ portfolio</h1>
@@ -538,55 +579,55 @@ export const Lunare = () => {
         className="absolute top-[16052px] left-0 w-[1440px] h-[797px] rotate-[-180.00deg] bg-[linear-gradient(180deg,rgba(245,244,242,1)_0%,rgba(249,249,247,1)_36%,rgba(252,252,251,1)_70%,rgba(255,255,255,0)_100%)]"
         aria-hidden="true"
       />
-      <header className="absolute inset-x-0 top-0 h-[741px]">
+      <header className="absolute inset-x-0 top-0 h-[810px] overflow-hidden">
         <img
-          className="left-[719px] w-[721px] h-[741px] absolute top-0 aspect-[0.97]"
+          className="absolute top-0 left-[760px] w-[680px] h-[810px] object-cover object-left"
           alt=""
           src={heroRight}
           aria-hidden="true"
         />
         <img
-          className="w-[719px] h-[741px] absolute top-0 left-0 aspect-[0.97] gsap-img"
+          className="absolute top-0 left-0 w-[760px] h-[810px] object-cover object-right gsap-img"
           alt=""
           src={heroLeft}
           aria-hidden="true"
         />
         <img
-          className="absolute top-[349px] left-[317px] w-[808px] h-[207px] aspect-[3.9] gsap-hero-title"
+          className="absolute top-[368px] left-[410px] w-[620px] h-[158px] aspect-[3.9] gsap-hero-title"
           alt="LUNARÉ logo"
           src={image}
         />
-        <div className="absolute top-[45px] left-20 [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-white text-base tracking-[0] leading-[normal] whitespace-nowrap">
+        <div className="absolute top-9 left-20 [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-white text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
           PORTFOLIO
         </div>
-        <div className="flex flex-col w-[165px] h-[95px] items-start justify-between absolute top-[580px] left-[83px] gsap-hero-meta">
+        <div className="flex flex-col w-[154px] h-[80px] items-start justify-between absolute top-[664px] left-[83px] gsap-hero-meta">
           {portfolioMeta.map((item) => (
             <div
               key={item.label}
               className={`relative ${item.width} h-[21px] ${item.label === "Contribution" ? "mr-[-4.00px]" : ""}`}
             >
-              <div className="absolute top-0 left-0 [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-white text-lg tracking-[0] leading-[normal] whitespace-nowrap">
+              <div className="absolute top-0 left-0 [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-white text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
                 {item.label}
               </div>
               <div
-                className={`absolute top-px ${item.valueLeft} [font-family:'Pretendard-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-[normal] whitespace-nowrap`}
+                className={`absolute top-px ${item.valueLeft} [font-family:'Pretendard-Regular',Helvetica] font-normal text-white text-sm tracking-[0] leading-[normal] whitespace-nowrap`}
               >
                 {item.value}
               </div>
             </div>
           ))}
-          <div className="relative self-stretch [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-white text-lg tracking-[0] leading-[normal]">
+          <div className="relative self-stretch [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-white text-[15px] tracking-[0] leading-[normal]">
             Tool
           </div>
         </div>
-        <p className="absolute top-[586px] left-[510px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-[normal] whitespace-nowrap">
+        <p className="absolute top-[642px] left-[538px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-white text-sm tracking-[0.05em] leading-[normal] whitespace-nowrap">
           BRANDING · UIUX DESIGN · VISUAL DESIGN · PUBLISHING
         </p>
       </header>
       <section aria-label="Brand concept hero">
-        <div className="absolute top-[1331px] left-0 w-[1440px] h-[4798px] bg-[linear-gradient(180deg,rgba(248,245,250,1)_13%,rgba(248,245,250,1)_40%,rgba(251,250,252,1)_63%,rgba(255,255,255,1)_93%)]" />
+        <div className="absolute top-[1400px] left-0 w-[1440px] h-[4798px] bg-[linear-gradient(180deg,rgba(248,245,250,1)_13%,rgba(248,245,250,1)_40%,rgba(251,250,252,1)_63%,rgba(255,255,255,1)_93%)]" />
         <img
-          className="absolute top-[1331px] left-0 w-[1099px] h-[787px] aspect-[1.4]"
+          className="absolute top-[1400px] left-0 w-[1099px] h-[787px] aspect-[1.4]"
           alt=""
           src={bg1}
           aria-hidden="true"
@@ -598,12 +639,12 @@ export const Lunare = () => {
           aria-hidden="true"
         />
         <img
-          className="absolute top-[741px] left-0 w-[1440px] h-[590px] aspect-[2.44]"
+          className="absolute top-[810px] left-0 w-[1440px] h-[590px] aspect-[2.44]"
           alt=""
           src={brandConcept}
           aria-hidden="true"
         />
-        <div className="absolute top-[878px] left-[248px] w-[947px] h-[325px] flex flex-col gap-[50px]">
+        <div className="absolute top-[947px] left-[248px] w-[947px] h-[325px] flex flex-col gap-[50px]">
           <h2 className="ml-[350px] w-[242px] h-[43px] [font-family:'Pretendard-Light',Helvetica] font-light text-white text-[28px] leading-[normal] tracking-[0.15em] whitespace-nowrap gsap-brand-text">
             Brand Concept
           </h2>
@@ -635,15 +676,15 @@ export const Lunare = () => {
       </section>
       <section aria-label="Branding overview">
         <div className="absolute top-[1569px] left-20 w-[734px] h-[134px] flex flex-col gap-10">
-          <h2 className="w-[162px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#664a64] text-[22px] tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
+          <h2 className="w-[162px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#664a64] text-2xl tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
             BRANDING
           </h2>
-          <p className="w-[730px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px] gsap-text">
+          <p className="w-[730px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-base tracking-[0] leading-[26px] gsap-text">
             <span className="text-[#222222]">
               빛을 과하게 드러내는 하이라이터가 아닌 피부 위에 자연스럽게
               스며드는 광채에 집중했습니다. LUNARÉ는{" "}
             </span>
-            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#674a64] text-[16px] leading-[24px]">
+            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#674a64] text-[17px] leading-[26px]">
               달빛의 잔상처럼 조용하지만 오래 남는 빛
             </span>
             <span className="text-[#222222]">을 표현합니다.</span>
@@ -652,33 +693,39 @@ export const Lunare = () => {
         <div className="flex flex-col w-[1070px] h-[210px] items-start justify-between absolute top-[1809px] left-[248px] gsap-stagger">
           <div className="relative w-[835px] h-[52px]">
             <div className="absolute top-3 left-0 w-48 h-[29px] flex gap-5">
-              <div className="w-[111px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#222222] text-base tracking-[0] leading-[normal]">
+              <div className="w-[111px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#222222] text-[17px] tracking-[0] leading-[normal]">
                 PROBLEM
               </div>
               <div className="mt-3.5 w-10" aria-hidden="true" style={{ borderTop: "0.5px dashed #aaaaaa" }} />
             </div>
-            <p className="absolute top-0 left-[212px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#666666] text-sm tracking-[0] leading-[22px]">
+            <p className="absolute top-0 left-[212px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#666666] text-[15px] tracking-[0] leading-[24px]">
               하이라이터 시장은 화려하고 과장된 광 표현에 집중되어 있습니다.
               <br />
-              반면 소비자들은 피부 본연의 결을 살리는 자연스러운 광채를 선호하고
-              있습니다.
+              반면 소비자들은{" "}
+              <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+                피부 본연의 결을 살리는 자연스러운 광채
+              </span>
+              를 선호하고 있습니다.
             </p>
           </div>
           <div className="relative w-[1072px] h-[78px] mr-[-2.00px]">
             <div className="absolute top-6 left-0 w-[194px] h-[29px] flex gap-5">
-              <div className="w-[113px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#222222] text-base tracking-[0] leading-[normal]">
+              <div className="w-[113px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#222222] text-[17px] tracking-[0] leading-[normal]">
                 SOLUTON
               </div>
               <div className="mt-3.5 w-10" aria-hidden="true" style={{ borderTop: "0.5px dashed #aaaaaa" }} />
             </div>
-            <p className="absolute top-0 left-[214px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[22px]">
+            <p className="absolute top-0 left-[214px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px]">
               <span className="text-[#9f6a6a]">
                 &#39;A Quiet Glow Inspired by Moonlight&#39;
               </span>
               <span className="text-[#666666]">
                 라는 브랜드 철학을 바탕으로
                 <br />
-                달빛이 피부 위에 남기는 은은한 빛의 잔상을 시각화했습니다.
+                <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+                  달빛이 피부 위에 남기는 은은한 빛의 잔상
+                </span>
+                을 시각화했습니다.
                 <br />
                 부드러운 반사와 섬세한 텍스처를 활용하여 감성적인 브랜드 경험을
                 제공하는 코스메틱 브랜드를 구축했습니다.
@@ -727,10 +774,10 @@ export const Lunare = () => {
       </section>
       <section aria-label="Logo development">
         <div className="absolute top-[3133px] left-[81px] w-[558px] h-[130px] flex flex-col gap-10">
-          <h2 className="w-[279px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#674a64] text-[22px] tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
+          <h2 className="w-[279px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#674a64] text-2xl tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
             Logo Development
           </h2>
-          <p className="w-[554px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[24px] gsap-text">
+          <p className="w-[554px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[26px] gsap-text">
             GFS Didot를 기반으로 세리프 특유의 우아함과
             <br />
             브랜드가 추구하는 조용한 광채의 이미지를 시각적으로 표현하였습니다.
@@ -743,7 +790,7 @@ export const Lunare = () => {
             src={image884}
           />
           <div className="relative w-[796px] h-[106px] mr-[-4.00px]">
-            <p className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px]">
+            <p className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-base tracking-[0] leading-[26px]">
               <span className="text-[#222222]">LUNARÉ는 </span>
               <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#9f6a6a]">
                 Lunar(달)와 Éclat(광채)
@@ -752,11 +799,14 @@ export const Lunare = () => {
                 를 결합하여 탄생한 네이밍입니다.
               </span>
             </p>
-            <p className="absolute top-[40px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[22px]">
+            <p className="absolute top-[40px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px]">
               <span className="text-[#666666]">
-                달빛이 남기는 은은한 잔상에서 영감을 받아, 피부 위에 자연스럽게
-                스며드는 광채를 표현하고자 하였습니다.  브랜드의 컬러 시스템,
-                비주얼 디렉션, 제품 경험 전반은{" "}
+                달빛이 남기는 은은한 잔상에서 영감을 받아,{" "}
+                <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+                  피부 위에 자연스럽게 스며드는 광채
+                </span>
+                를 표현하고자 하였습니다. 브랜드의 컬러 시스템, 비주얼 디렉션,
+                제품 경험 전반은{" "}
               </span>
               <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#9f6a6a]">
                 &apos;Quiet Glow&apos;
@@ -770,14 +820,17 @@ export const Lunare = () => {
       </section>
       <section aria-label="Design system">
         <div className="flex flex-col w-[628px] items-start gap-10 absolute top-[3710px] left-20">
-          <h2 className="relative self-stretch mt-[-1.00px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#674a64] text-[22px] tracking-[0] leading-[normal] gsap-heading">
+          <h2 className="relative self-stretch mt-[-1.00px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#674a64] text-2xl tracking-[0] leading-[normal] gsap-heading">
             DESIGN SYSTEM
           </h2>
-          <p className="relative self-stretch [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[24px] gsap-text">
+          <p className="relative self-stretch [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[26px] gsap-text">
             기존 하이라이터 브랜드가 과한 광택과 메탈릭 무드에 집중하는 반면
             <br />
-            LUNARÉ는 빛 번짐과 피부 표현 자체에 집중하여 차별화된 무드를
-            구축했습니다.
+            LUNARÉ는{" "}
+            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+              빛 번짐과 피부 표현 자체
+            </span>
+            에 집중하여 차별화된 무드를 구축했습니다.
           </p>
         </div>
         <div className="flex flex-col w-[543px] h-[629px] items-start justify-between absolute top-[3943px] left-20">
@@ -1010,14 +1063,14 @@ export const Lunare = () => {
             src={mckrup1}
           />
         </div>
-        <h2 className="absolute top-[7586px] left-20 [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#674a64] text-[22px] tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
+        <h2 className="absolute top-[7586px] left-20 [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#674a64] text-2xl tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
           UI &amp; UX
         </h2>
         <div
           className="absolute top-[8659px] left-px w-[1440px] h-[2454px] rotate-[180.00deg] bg-[linear-gradient(180deg,rgba(255,255,255,0.1)_0%,rgba(228,225,228,0.1)_9%,rgba(228,225,228,0.43)_22%,rgba(228,225,228,0.6)_35%,rgba(228,225,228,0.68)_66%,rgba(228,225,228,1)_100%)]"
           aria-hidden="true"
         />
-        <div className="absolute top-[8922px] left-[81px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#674a64] text-sm tracking-[0] leading-[normal] whitespace-nowrap gsap-fade">
+        <div className="absolute top-[8922px] left-[81px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#674a64] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap gsap-fade">
           Main Page
         </div>
         <article
@@ -1035,29 +1088,44 @@ export const Lunare = () => {
             key={note.number}
             className={`absolute ${note.top} ${note.left} ${note.width} gsap-text`}
           >
-            <div className="flex items-center">
-              <div className="relative flex items-center shrink-0">
-                <div className="w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid shrink-0" />
-                <div className="w-[47px] shrink-0" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
-                {note.extra}
-              </div>
-              <div className="flex flex-col ml-[11px]">
-                <span className="[font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-tight">
+            {note.number === "01" ? (
+              <div className="relative h-[52px]">
+                <div className="absolute top-[6px] left-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid" />
+                <div className="absolute top-[11px] left-[11px] w-[44px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
+                <div className="absolute top-[11px] left-[55px] h-[21px]" aria-hidden="true" style={{ borderLeft: "0.5px dashed #907e9e" }} />
+                <div className="absolute top-[32px] left-[55px] w-[26px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
+                <span className="absolute top-[2px] left-[92px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-tight">
                   {note.number}
                 </span>
-                <span className="[font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-tight whitespace-nowrap">
+                <span className="absolute top-[24px] left-[92px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-tight whitespace-nowrap">
                   {note.title}
                 </span>
               </div>
-            </div>
-            <p className={`absolute ${note.bodyTop} ${note.bodyLeft} [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]`}>
+            ) : (
+              <div className="flex items-center">
+                <div className="relative flex items-center shrink-0">
+                  <div className="w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid shrink-0" />
+                  <div className={`${note.connectorWidth} shrink-0`} aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
+                  {note.extra}
+                </div>
+                <div className="flex flex-col ml-[11px]">
+                  <span className="[font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-tight">
+                    {note.number}
+                  </span>
+                  <span className="[font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-tight whitespace-nowrap">
+                    {note.title}
+                  </span>
+                </div>
+              </div>
+            )}
+            <p className={`absolute ${note.bodyTop} ${note.bodyLeft} [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]`}>
               {note.body}
             </p>
           </article>
         ))}
       </section>
       <section aria-label="Shop page showcase">
-        <div className="absolute top-[11181px] left-[360px] text-[#674a64] text-sm whitespace-nowrap [font-family:'Pretendard-Regular',Helvetica] font-normal tracking-[0] leading-[normal] gsap-fade">
+        <div className="absolute top-[11181px] left-[360px] text-[#674a64] text-[15px] whitespace-nowrap [font-family:'Pretendard-Regular',Helvetica] font-normal tracking-[0] leading-[normal] gsap-fade">
           Shop Page
         </div>
         <img
@@ -1072,7 +1140,7 @@ export const Lunare = () => {
             src={iphone16}
           />
         </div>
-        <div className="absolute top-[11986px] left-[1247px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#888888] text-base tracking-[0] leading-[normal] whitespace-nowrap">
+        <div className="absolute top-[11986px] left-[1247px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#888888] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
           모바일 ver.
         </div>
         <article className="absolute top-[11288px] left-[1034px] w-[341px] h-[115px] gsap-text">
@@ -1082,9 +1150,13 @@ export const Lunare = () => {
             <div className="absolute top-[5px] left-2.5 w-[47px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[5px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">01</div>
-          <div className="absolute top-[32px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">헤더 &amp; 브랜드 메시지</div>
-          <p className="absolute top-[62px] left-[68px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            브랜드 슬로건과 핵심 무드를<br />상단에 배치하여 LUNARÉ만의 감성을<br />직관적으로 전달했습니다.
+          <div className="absolute top-[32px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">헤더 &amp; 브랜드 메시지</div>
+          <p className="absolute top-[62px] left-[68px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
+            브랜드 슬로건과{" "}
+            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+              핵심 무드
+            </span>
+            를<br />상단에 배치하여 LUNARÉ만의 감성을<br />직관적으로 전달했습니다.
           </p>
         </article>
         <article className="absolute top-[11374px] left-20 w-[293px] h-[115px] gsap-text">
@@ -1094,9 +1166,13 @@ export const Lunare = () => {
             <div className="absolute top-[5px] left-2.5 w-[95px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[6px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
-          <div className="absolute top-[33px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">제품 탐색 구조</div>
-          <p className="absolute top-[63px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            카테고리와 제품을 한 화면에 구성하여<br />사용자가 원하는 제품을 빠르게<br />탐색할 수 있도록 설계했습니다
+          <div className="absolute top-[33px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">제품 탐색 구조</div>
+          <p className="absolute top-[63px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
+            카테고리와 제품을 한 화면에 구성하여<br />사용자가 원하는 제품을{" "}
+            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+              빠르게 탐색
+            </span>
+            할 수 있도록 설계했습니다
           </p>
         </article>
         <article className="absolute top-[11566px] left-[1034px] w-[355px] h-[115px] gsap-text">
@@ -1106,23 +1182,45 @@ export const Lunare = () => {
             <div className="absolute top-[5px] left-2.5 w-[47px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[5px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">03</div>
-          <div className="absolute top-[32px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">제품 리스트</div>
-          <p className="absolute top-[62px] left-[68px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+          <div className="absolute top-[32px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">제품 리스트</div>
+          <p className="absolute top-[62px] left-[68px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             제품의 이미지와 주요 정보를<br />일관된 그리드로 배치하여<br />브랜드의 무드와 가독성을 강화했습니다.
           </p>
         </article>
-        <article className="absolute top-[11929px] left-[1138px] w-[166px] h-[91px] gsap-text">
+        <article
+          className="absolute w-[166px] h-[91px] gsap-text"
+          style={
+            isNarrowViewport
+              ? { top: "12890px", left: "1149px" }
+              : { top: "11929px", left: "1138px" }
+          }
+        >
           {/* vertical line → number top: 0, title top: 12+15=27px */}
           <div className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">04</div>
-          <div className="absolute top-[27px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">반응형 디자인</div>
-          <div className="absolute top-[32px] left-[13px] overflow-visible" aria-hidden="true">
-            <div className="absolute top-0 left-0 h-[40px]" style={{ borderLeft: "0.5px dashed #907e9e" }} />
-            <div className="absolute top-[35px] left-[-5px] w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]" />
+          <div
+            className="absolute left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap"
+            style={{ top: isNarrowViewport ? "10px" : "27px" }}
+          >
+            반응형 디자인
+          </div>
+          <div
+            className="absolute left-[13px] overflow-visible"
+            aria-hidden="true"
+            style={{ top: isNarrowViewport ? "40px" : "32px" }}
+          >
+            <div
+              className="absolute top-0 left-0"
+              style={{ borderLeft: "0.5px dashed #907e9e", height: isNarrowViewport ? "20px" : "40px" }}
+            />
+            <div
+              className="absolute left-[-5px] w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]"
+              style={{ top: isNarrowViewport ? "15px" : "35px" }}
+            />
           </div>
         </article>
       </section>
       <section aria-label="Detail page showcase">
-        <div className="absolute top-[13196px] left-[659px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#674a64] text-sm tracking-[0] leading-[normal] whitespace-nowrap gsap-fade">
+        <div className="absolute top-[13196px] left-[659px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#674a64] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap gsap-fade">
           Detail Page
         </div>
         <img
@@ -1137,9 +1235,13 @@ export const Lunare = () => {
             <div className="absolute top-[5px] left-2.5 w-[140px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[6px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">01</div>
-          <div className="absolute top-[33px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">제품 상세 정보</div>
-          <p className="absolute top-[63px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            제품 이미지와 핵심 정보를 깔끔하게 배치하여<br />한눈에 이해할 수 있도록 구성했습니다.
+          <div className="absolute top-[33px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">제품 상세 정보</div>
+          <p className="absolute top-[63px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
+            제품 이미지와 핵심 정보를 깔끔하게 배치하여<br />
+            <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#7e5a68]">
+              한눈에 이해
+            </span>
+            할 수 있도록 구성했습니다.
           </p>
         </article>
         <article className="absolute top-[13927px] left-[391px] w-[295px] h-[141px] gsap-text">
@@ -1150,8 +1252,8 @@ export const Lunare = () => {
             <div className="absolute top-0 left-[202px] h-[37px]" aria-hidden="true" style={{ borderLeft: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[44px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
-          <div className="absolute top-[71px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">텍스처</div>
-          <p className="absolute top-[101px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+          <div className="absolute top-[71px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">텍스처</div>
+          <p className="absolute top-[101px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             실제 발색 이미지와 텍스처를 제공하여<br />제품의 특성을 직관적으로 전달합니다.
           </p>
         </article>
@@ -1163,14 +1265,14 @@ export const Lunare = () => {
             <div className="absolute top-[54px] left-[5px] w-[55px]" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[51px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">03</div>
-          <div className="absolute top-[78px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">연관 제품 추천</div>
-          <p className="absolute top-[108px] left-[67px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+          <div className="absolute top-[78px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">연관 제품 추천</div>
+          <p className="absolute top-[108px] left-[67px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             유사 제품을 함께 노출하여<br />사용자의 선택을 돕고 쇼핑 경험을 확장합니다.
           </p>
         </article>
       </section>
       <section aria-label="Login and signup showcase">
-        <div className="absolute top-[14561px] left-20 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#674a64] text-sm tracking-[0] leading-[normal] whitespace-nowrap gsap-fade">
+        <div className="absolute top-[14561px] left-20 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#674a64] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap gsap-fade">
           Login
         </div>
         <img
@@ -1193,10 +1295,10 @@ export const Lunare = () => {
             <div className="absolute top-0 left-0 h-[112px]" style={{ borderLeft: "0.5px dashed #907e9e" }} />
             <div className="absolute top-[107px] left-[-5px] w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]" />
           </div>
-          <div className="absolute top-0 left-[105px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
+          <div className="absolute top-0 left-[105px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">
             로그인 화면
           </div>
-          <p className="absolute top-[46px] left-[105px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+          <p className="absolute top-[46px] left-[105px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             브랜드 무드가 느껴지는 배경과
             <br />
             간결한 폼으로 집중도 높은 로그인을 유도합니다.
@@ -1211,10 +1313,10 @@ export const Lunare = () => {
             <div className="absolute top-[11px] left-[5px] h-[43px]" style={{ borderLeft: "0.5px dashed #907e9e" }} />
             <div className="absolute top-[54px] left-[5px] w-[55px]" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
-          <div className="absolute top-[46px] left-[103px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
+          <div className="absolute top-[46px] left-[103px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">
             회원가입 화면
           </div>
-          <p className="absolute top-[92px] left-[103px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+          <p className="absolute top-[92px] left-[103px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-[15px] tracking-[0] leading-[24px]">
             필수 정보만 간단하게 입력하여
             <br />
             사용자의 편의성을 높이고 빠른 가입을 지원합니다.
