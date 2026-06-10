@@ -727,10 +727,10 @@ export const Lunare = () => {
       </section>
       <section aria-label="Logo development">
         <div className="absolute top-[3133px] left-[81px] w-[558px] h-[130px] flex flex-col gap-10">
-          <h2 className="w-[279px] h-[38px] [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#674a64] text-[32px] tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
+          <h2 className="w-[279px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#674a64] text-[22px] tracking-[0] leading-[normal] whitespace-nowrap gsap-heading">
             Logo Development
           </h2>
-          <p className="w-[554px] h-[52px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-xl tracking-[0] leading-[26.0px] gsap-text">
+          <p className="w-[554px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[24px] gsap-text">
             GFS Didot를 기반으로 세리프 특유의 우아함과
             <br />
             브랜드가 추구하는 조용한 광채의 이미지를 시각적으로 표현하였습니다.
@@ -743,7 +743,7 @@ export const Lunare = () => {
             src={image884}
           />
           <div className="relative w-[796px] h-[106px] mr-[-4.00px]">
-            <p className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-2xl tracking-[0] leading-[normal]">
+            <p className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-[15px] tracking-[0] leading-[24px]">
               <span className="text-[#222222]">LUNARÉ는 </span>
               <span className="[font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#9f6a6a]">
                 Lunar(달)와 Éclat(광채)
@@ -752,7 +752,7 @@ export const Lunare = () => {
                 를 결합하여 탄생한 네이밍입니다.
               </span>
             </p>
-            <p className="absolute top-[60px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-lg tracking-[0] leading-[23.4px]">
+            <p className="absolute top-[40px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-transparent text-sm tracking-[0] leading-[22px]">
               <span className="text-[#666666]">
                 달빛이 남기는 은은한 잔상에서 영감을 받아, 피부 위에 자연스럽게
                 스며드는 광채를 표현하고자 하였습니다.  브랜드의 컬러 시스템,
