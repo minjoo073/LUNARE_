@@ -1076,69 +1076,45 @@ export const Lunare = () => {
           모바일 ver.
         </div>
         <article className="absolute top-[11288px] left-[1034px] w-[341px] h-[115px] gsap-text">
-          <div className="top-0 left-[65px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]">
-            01
-          </div>
-          <div className="absolute top-0 left-[103px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
-            헤더 &amp; 브랜드 메시지
-          </div>
-          <p className="absolute top-[46px] left-[67px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            브랜드 슬로건과 핵심 무드를
-            <br />
-            상단에 배치하여 LUNARÉ만의 감성을
-            <br />
-            직관적으로 전달했습니다.
-          </p>
+          {/* dot: top-1.5(6px), line center: 11px → number top: 5px, title top: 5+12+15=32px, text left: 58+10=68px */}
           <div className="absolute top-1.5 left-0 w-[57px] h-[11px]">
             <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[47px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
+          <div className="absolute top-[5px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">01</div>
+          <div className="absolute top-[32px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">헤더 &amp; 브랜드 메시지</div>
+          <p className="absolute top-[62px] left-[68px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+            브랜드 슬로건과 핵심 무드를<br />상단에 배치하여 LUNARÉ만의 감성을<br />직관적으로 전달했습니다.
+          </p>
         </article>
         <article className="absolute top-[11374px] left-20 w-[293px] h-[115px] gsap-text">
-          <div className="top-0 left-[147px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]">
-            02
-          </div>
-          <div className="absolute top-0 left-1.5 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
-            제품 탐색 구조
-          </div>
-          <p className="absolute top-[46px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            카테고리와 제품을 한 화면에 구성하여
-            <br />
-            사용자가 원하는 제품을 빠르게
-            <br />
-            탐색할 수 있도록 설계했습니다
-          </p>
+          {/* line on right (rotated), line center: 12px → number top: 6px, title top: 6+12+15=33px, text right edge: 182-10=172px */}
           <div className="absolute top-[7px] left-[182px] w-[105px] h-[11px] rotate-[-180.00deg]">
             <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[95px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
+          <div className="absolute top-[6px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
+          <div className="absolute top-[33px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">제품 탐색 구조</div>
+          <p className="absolute top-[63px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+            카테고리와 제품을 한 화면에 구성하여<br />사용자가 원하는 제품을 빠르게<br />탐색할 수 있도록 설계했습니다
+          </p>
         </article>
         <article className="absolute top-[11566px] left-[1034px] w-[355px] h-[115px] gsap-text">
-          <div className="top-0 left-[65px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]">
-            03
-          </div>
-          <div className="absolute top-0 left-[107px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
-            제품 리스트
-          </div>
-          <p className="absolute top-[46px] left-[67px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            제품의 이미지와 주요 정보를
-            <br />
-            일관된 그리드로 배치하여
-            <br />
-            브랜드의 무드와 가독성을 강화했습니다.
-          </p>
+          {/* dot: top-1.5(6px), line center: 11px → number top: 5px, title top: 32px, text left: 68px */}
           <div className="absolute top-1.5 left-0 w-[57px] h-[11px]">
             <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[47px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
+          <div className="absolute top-[5px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">03</div>
+          <div className="absolute top-[32px] left-[68px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">제품 리스트</div>
+          <p className="absolute top-[62px] left-[68px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+            제품의 이미지와 주요 정보를<br />일관된 그리드로 배치하여<br />브랜드의 무드와 가독성을 강화했습니다.
+          </p>
         </article>
         <article className="absolute top-[11929px] left-[1138px] w-[166px] h-[91px] gsap-text">
-          <div className="top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]">
-            04
-          </div>
-          <div className="absolute top-0 left-[42px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
-            반응형 디자인
-          </div>
+          {/* vertical line → number top: 0, title top: 12+15=27px */}
+          <div className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">04</div>
+          <div className="absolute top-[27px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">반응형 디자인</div>
           <div className="absolute top-[32px] left-[13px] overflow-visible" aria-hidden="true">
             <div className="absolute top-0 left-0 h-[40px]" style={{ borderLeft: "0.5px dashed #907e9e" }} />
             <div className="absolute top-[35px] left-[-5px] w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]" />
