@@ -1131,56 +1131,42 @@ export const Lunare = () => {
           src={detailPage}
         />
         <article className="absolute top-[13605px] left-[343px] w-[328px] h-[92px] gsap-text">
-          <div className="top-0 left-[141px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]">
-            01
-          </div>
-          <div className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
-            제품 상세 정보
-          </div>
-          <p className="absolute top-[46px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            제품 이미지와 핵심 정보를 깔끔하게 배치하여 <br />
-            한눈에 이해할 수 있도록 구성했습니다.
-          </p>
+          {/* 오른쪽에서 왼쪽 선, line center y=12px, 선 왼쪽끝 172px → text right≤162px, left-0 기준 */}
           <div className="absolute top-[7px] left-[172px] w-[150px] h-[11px] rotate-[-180.00deg]">
             <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid absolute left-0" />
             <div className="absolute top-[5px] left-2.5 w-[140px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
+          <div className="absolute top-[6px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">01</div>
+          <div className="absolute top-[33px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">제품 상세 정보</div>
+          <p className="absolute top-[63px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+            제품 이미지와 핵심 정보를 깔끔하게 배치하여<br />한눈에 이해할 수 있도록 구성했습니다.
+          </p>
         </article>
         <article className="absolute top-[13927px] left-[391px] w-[295px] h-[141px] gsap-text">
-          <div className="top-[49px] left-[73px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]">
-            02
-          </div>
-          <div className="absolute top-[49px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
-            텍스처
-          </div>
-          <p className="absolute top-[95px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            실제 발색 이미지와 텍스처를 제공하여
-            <br />
-            제품의 특성을 직관적으로 전달합니다.
-          </p>
+          {/* 수직+수평 꺾임선, 텍스트 왼쪽 정렬, number top-[44px] → title top-[71px] */}
           <div className="absolute top-px left-[87px] w-[202px] h-[41px] rotate-[-180.00deg]">
             <div className="absolute top-[30px] left-px w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] border border-solid" />
             <div className="absolute top-[35px] left-2.5 w-48" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
             <div className="absolute top-0 left-[202px] h-[37px]" aria-hidden="true" style={{ borderLeft: "0.5px dashed #907e9e" }} />
           </div>
+          <div className="absolute top-[44px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
+          <div className="absolute top-[71px] left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">텍스처</div>
+          <p className="absolute top-[101px] left-0 [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+            실제 발색 이미지와 텍스처를 제공하여<br />제품의 특성을 직관적으로 전달합니다.
+          </p>
         </article>
         <article className="absolute top-[14224px] left-[754px] w-[431px] h-[138px] gsap-text">
-          <div className="top-[46px] left-[61px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs whitespace-nowrap absolute font-normal tracking-[0.08em] leading-[normal]">
-            03
-          </div>
-          <div className="absolute top-[46px] left-[103px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
-            연관 제품 추천
-          </div>
-          <p className="absolute top-[92px] left-[103px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
-            유사 제품을 함께 노출하여
-            <br />
-            사용자의 선택을 돕도 쇼핑 경험을 확장합니다.
-          </p>
+          {/* L자 선 끝 x≈67px, y≈57px → number top-[51px] left-[67px], title top-[78px] */}
           <div className="absolute top-[3px] left-[-3px] overflow-visible" aria-hidden="true">
             <div className="absolute top-0 left-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]" />
             <div className="absolute top-[11px] left-[5px] h-[43px]" style={{ borderLeft: "0.5px dashed #907e9e" }} />
             <div className="absolute top-[54px] left-[5px] w-[55px]" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
+          <div className="absolute top-[51px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">03</div>
+          <div className="absolute top-[78px] left-[67px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">연관 제품 추천</div>
+          <p className="absolute top-[108px] left-[67px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#555555] text-sm tracking-[0] leading-[22px]">
+            유사 제품을 함께 노출하여<br />사용자의 선택을 돕고 쇼핑 경험을 확장합니다.
+          </p>
         </article>
       </section>
       <section aria-label="Login and signup showcase">
