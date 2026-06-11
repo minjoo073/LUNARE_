@@ -103,7 +103,15 @@ export function usePortfolioAnimations() {
         });
       });
 
-      // 8. 히어로 텍스트 초기 애니메이션 (페이지 로드 시)
+      // 8. 와이어프레임 텍스트 항목별 개별 등장
+      gsap.utils.toArray(".gsap-wire-item").forEach((el) => {
+        gsap.from(el, {
+          scrollTrigger: { trigger: el, start: "top 88%", toggleActions: "play none none none" },
+          y: 25, opacity: 0, duration: 0.9, ease,
+        });
+      });
+
+      // 9. 히어로 텍스트 초기 애니메이션 (페이지 로드 시)
       gsap.from(".gsap-hero-title", {
         y: 60, opacity: 0, duration: 1.5, delay: 0.3, ease: "power4.out",
       });

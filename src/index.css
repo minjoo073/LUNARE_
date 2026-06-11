@@ -17,6 +17,16 @@
   }
 }
 
+@keyframes float-up-down {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.nukki-float {
+  animation: float-up-down 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
 :root {
   --animate-spin: spin 1s linear infinite;
 }

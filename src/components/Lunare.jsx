@@ -4,6 +4,7 @@ import bg1 from "../assets/images/bg-1.webp";
 import bg2 from "../assets/images/bg-2.webp";
 import brandConcept from "../assets/images/brand_concept.webp";
 import branding1 from "../assets/images/branding_1.webp";
+import branding11 from "../assets/images/branding_1_1.png";
 import detail01 from "../assets/images/detail-01.webp";
 import detailBg from "../assets/images/detail-bg.webp";
 import detailPage from "../assets/images/detail_page.webp";
@@ -73,6 +74,7 @@ import nameBg1 from "../assets/images/name-bg1.webp";
 import screencaptureMinjoo073GithubIoLunare202606060249181 from "../assets/images/screencapture-minjoo073-github-io-LUNARE-2026-06-06-02-49-18-1.png";
 import screencaptureMinjoo073GithubIoLunare202606060249182 from "../assets/images/screencapture-minjoo073-github-io-LUNARE-2026-06-06-02-49-18-2.png";
 import sectionLeft from "../assets/images/section_left.webp";
+import sectionLeft1 from "../assets/images/section_left_1.png";
 import sectionRight from "../assets/images/section_right.webp";
 import section01Right1 from "../assets/images/section01-right1.webp";
 import shopPage from "../assets/images/shop_page.webp";
@@ -492,6 +494,7 @@ const mainPageNotes = [
 
 import { usePortfolioAnimations } from "../hooks/usePortfolioAnimations";
 
+
 const PORTFOLIO_BASE_WIDTH = 1440;
 const PORTFOLIO_BASE_HEIGHT = 16849;
 const PORTFOLIO_MAX_SCALE = 1920 / PORTFOLIO_BASE_WIDTH;
@@ -519,6 +522,48 @@ export const Lunare = () => {
   usePortfolioAnimations();
 
   useEffect(() => {
+    const overlay = document.getElementById("process-img-overlay");
+    if (!overlay) return;
+    overlay.style.transition = "opacity 0.7s ease";
+
+    const handleScroll = () => {
+      const step02 = document.querySelector(".process-step-02");
+      if (!step02 || !overlay) return;
+      const rect = step02.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.8) {
+        overlay.style.opacity = "0";
+      } else {
+        overlay.style.opacity = "1";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const overlay = document.getElementById("section-left-overlay");
+    if (!overlay) return;
+    overlay.style.transition = "opacity 0.7s ease";
+
+    const handleScroll = () => {
+      const trigger = document.querySelector(".section-naming-mid");
+      if (!trigger || !overlay) return;
+      const rect = trigger.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.35) {
+        overlay.style.opacity = "0";
+      } else {
+        overlay.style.opacity = "1";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => {
       setPortfolioScale(getPortfolioScale());
       setIsNarrowViewport(getIsNarrowViewport());
@@ -531,6 +576,7 @@ export const Lunare = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
 
   return (
     <div
@@ -587,7 +633,7 @@ export const Lunare = () => {
           aria-hidden="true"
         />
         <img
-          className="absolute top-0 left-0 w-[760px] h-[810px] object-cover object-right gsap-img"
+          className="absolute top-0 left-0 w-[760px] h-[810px] object-cover object-right"
           alt=""
           src={heroLeft}
           aria-hidden="true"
@@ -745,11 +791,18 @@ export const Lunare = () => {
           alt="Branding concept board"
           src={branding1}
         />
+        <img
+          id="process-img-overlay"
+          className="absolute top-[2221px] left-20 w-[519px] h-[662px] aspect-[0.78]"
+          alt=""
+          aria-hidden="true"
+          src={branding11}
+        />
         <div className="flex flex-col w-[670px] h-[616px] items-start justify-between absolute top-[2252px] left-[691px]">
           {processSteps.map((step) => (
             <article
               key={step.step}
-              className={`relative ${step.width} h-[136px] ${step.width === "w-[672px]" ? "mr-[-2.00px]" : ""} gsap-text`}
+              className={`relative ${step.width} h-[136px] ${step.width === "w-[672px]" ? "mr-[-2.00px]" : ""} gsap-text${step.step === "Step 02" ? " process-step-02" : ""}`}
             >
               <div
                 className={`absolute top-0 left-0 ${step.titleWrap} h-[63px] flex flex-col gap-[15px]`}
@@ -1000,11 +1053,11 @@ export const Lunare = () => {
             />
           ))}
         </div>
-        <div className="flex flex-col w-[370px] h-[714px] items-start justify-between absolute top-[5165px] left-[321px] gsap-stagger">
+        <div className="flex flex-col w-[370px] h-[714px] items-start justify-between absolute top-[5165px] left-[321px]">
           {wireframeSections.map((item) => (
             <div
               key={item.title}
-              className={`relative ${item.width} h-[62px] ${item.width === "w-[374px]" ? "mr-[-4.00px]" : ""}`}
+              className={`relative ${item.width} h-[62px] ${item.width === "w-[374px]" ? "mr-[-4.00px]" : ""} gsap-wire-item`}
             >
               <div className="absolute top-0 left-0 [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap">
                 {item.title}
@@ -1018,16 +1071,23 @@ export const Lunare = () => {
       </section>
       <section aria-label="Brand naming">
         <img
-          className="absolute top-[6130px] left-[720px] w-[720px] h-[846px] aspect-[0.85] gsap-slide-right"
+          className="absolute top-[6130px] left-[720px] w-[720px] h-[846px] aspect-[0.85] section-naming-mid"
           alt=""
           src={sectionRight}
           aria-hidden="true"
         />
         <img
-          className="absolute top-[6130px] left-0 w-[720px] h-[846px] aspect-[0.85] gsap-slide-left"
+          className="absolute top-[6130px] left-0 w-[720px] h-[846px] aspect-[0.85]"
           alt=""
           src={sectionLeft}
           aria-hidden="true"
+        />
+        <img
+          id="section-left-overlay"
+          className="absolute top-[6130px] left-0 w-[720px] h-[846px] aspect-[0.85]"
+          alt=""
+          aria-hidden="true"
+          src={sectionLeft1}
         />
         <div
           className="absolute top-[6976px] left-0 w-[1440px] h-[500px] bg-[#b99592]"
@@ -1142,7 +1202,7 @@ export const Lunare = () => {
             src={iphone16}
           />
         </div>
-        <div
+<div
           className="absolute [font-family:'Pretendard-Light',Helvetica] font-light text-[#888888] text-[15px] tracking-[0] leading-[normal] whitespace-nowrap"
           style={
             isNarrowViewport
