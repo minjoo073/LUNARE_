@@ -551,7 +551,7 @@ export const Lunare = () => {
       const trigger = document.querySelector(".section-naming-mid");
       if (!trigger || !overlay) return;
       const rect = trigger.getBoundingClientRect();
-      if (rect.top < window.innerHeight * 0.35) {
+      if (rect.top < -rect.height * 0.15) {
         overlay.style.opacity = "0";
       } else {
         overlay.style.opacity = "1";
@@ -787,7 +787,7 @@ export const Lunare = () => {
           style={{ borderTop: "0.5px dashed #cccccc" }}
         />
         <img
-          className="absolute top-[2221px] left-20 w-[519px] h-[662px] aspect-[0.78]"
+          className="absolute top-[2221px] left-20 w-[519px] h-[662px] aspect-[0.78] process-image-base"
           alt="Branding concept board"
           src={branding1}
         />
@@ -798,20 +798,20 @@ export const Lunare = () => {
           aria-hidden="true"
           src={branding11}
         />
-        <div className="flex flex-col w-[670px] h-[616px] items-start justify-between absolute top-[2252px] left-[691px]">
+        <div className="flex flex-col w-[670px] h-[616px] items-start justify-between absolute top-[2252px] left-[691px] process-steps">
           {processSteps.map((step) => (
             <article
               key={step.step}
-              className={`relative ${step.width} h-[136px] ${step.width === "w-[672px]" ? "mr-[-2.00px]" : ""} gsap-text${step.step === "Step 02" ? " process-step-02" : ""}`}
+              className={`relative ${step.width} h-[136px] ${step.width === "w-[672px]" ? "mr-[-2.00px]" : ""} gsap-process-step${step.step === "Step 02" ? " process-step-02" : ""}`}
             >
               <div
                 className={`absolute top-0 left-0 ${step.titleWrap} h-[63px] flex flex-col gap-[15px]`}
               >
-                <div className="w-[57px] h-[19px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#aaaaaa] text-sm tracking-[0.08em] leading-[normal] whitespace-nowrap">
+                <div className="w-[57px] h-[19px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#aaaaaa] text-sm tracking-[0.08em] leading-[normal] whitespace-nowrap gsap-process-num">
                   {step.step}
                 </div>
                 <div
-                  className="w-fit [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#1a1a1a] text-lg tracking-[0.04em] leading-[normal] whitespace-nowrap"
+                  className="w-fit [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#1a1a1a] text-lg tracking-[0.04em] leading-[normal] whitespace-nowrap gsap-process-title"
                 >
                   {step.title}
                 </div>
@@ -1283,11 +1283,10 @@ export const Lunare = () => {
           </p>
         </article>
         <article className="absolute top-[13927px] left-[391px] w-[295px] h-[141px] gsap-text">
-          {/* 수직+수평 꺾임선, 텍스트 왼쪽 정렬, number top-[44px] → title top-[71px] */}
-          <div className="absolute top-px left-[87px] w-[202px] h-[41px] rotate-[-180.00deg]">
-            <div className="absolute top-[30px] left-px w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px]" />
-            <div className="absolute top-[35px] left-2.5 w-48" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
-            <div className="absolute top-0 left-[202px] h-[37px]" aria-hidden="true" style={{ borderLeft: "0.5px dashed #907e9e" }} />
+          {/* 01과 동일한 가로선 + 원 (수직 강하 제거) */}
+          <div className="absolute top-[46px] left-[120px] w-[169px] h-[11px] rotate-[-180.00deg]">
+            <div className="top-0 w-[11px] h-[11px] bg-[#907e9e] rounded-[5.5px] absolute left-0" />
+            <div className="absolute top-[5px] left-2.5 w-[159px]" aria-hidden="true" style={{ borderTop: "0.5px dashed #907e9e" }} />
           </div>
           <div className="absolute top-[46px] left-0 [font-family:'Pretendard-Regular',Helvetica] text-[#907e9e] text-xs tracking-[0.08em] leading-[normal]">02</div>
           <div className="absolute top-[40px] left-[38px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-[#222222] text-base tracking-[0] leading-[normal] whitespace-nowrap">텍스처</div>

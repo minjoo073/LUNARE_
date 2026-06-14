@@ -119,6 +119,59 @@ export function usePortfolioAnimations() {
       gsap.from(".gsap-hero-meta", {
         y: 25, opacity: 0, duration: 1.1, delay: 0.8, stagger: 0.15, ease,
       });
+
+      // 10. Process Step 카드 — 개별 fade-up (한꺼번에 들어오지 않도록)
+      gsap.utils.toArray(".gsap-process-step").forEach((el) => {
+        gsap.from(el, {
+          scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none none" },
+          y: 40, opacity: 0, duration: 1.0, ease,
+        });
+      });
+
+      // 11. Process 컨셉 이미지 미세 패럴럭스 (정적 이미지에 깊이감)
+      const processStepsContainer = document.querySelector(".process-steps");
+      const processImageBase = document.querySelector(".process-image-base");
+      if (processImageBase && processStepsContainer) {
+        gsap.fromTo(
+          processImageBase,
+          { yPercent: 3 },
+          {
+            yPercent: -5,
+            ease: "none",
+            scrollTrigger: {
+              trigger: processStepsContainer,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: 1,
+            },
+          }
+        );
+      }
+
+      // 13. Active Step 강조 — 현재 보는 Step의 번호·제목 컬러 시프트
+      gsap.utils.toArray(".gsap-process-step").forEach((stepEl) => {
+        const numEl = stepEl.querySelector(".gsap-process-num");
+        const titleEl = stepEl.querySelector(".gsap-process-title");
+        if (!numEl || !titleEl) return;
+        gsap.set(titleEl, { transformOrigin: "left center" });
+        const activate = () => {
+          gsap.to(numEl, { color: "#7e5a68", duration: 0.45, ease: "power2.out" });
+          gsap.to(titleEl, { color: "#7e5a68", scale: 1.08, duration: 0.5, ease: "power2.out" });
+        };
+        const deactivate = () => {
+          gsap.to(numEl, { color: "#aaaaaa", duration: 0.45, ease: "power2.out" });
+          gsap.to(titleEl, { color: "#1a1a1a", scale: 1, duration: 0.5, ease: "power2.out" });
+        };
+        ScrollTrigger.create({
+          trigger: stepEl,
+          start: "top 60%",
+          end: "bottom 40%",
+          onEnter: activate,
+          onEnterBack: activate,
+          onLeave: deactivate,
+          onLeaveBack: deactivate,
+        });
+      });
     });
 
     return () => ctx.revert();

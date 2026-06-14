@@ -8,6 +8,7 @@ export const CursorSparkle = () => {
     const ctx = canvas.getContext("2d");
     let particles = [];
     let mouse = { x: -200, y: -200 };
+    let prevMouse = { x: -200, y: -200 };
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -25,26 +26,34 @@ export const CursorSparkle = () => {
       "224,214,238",
     ];
 
-    class Particle {
-      constructor(x, y) {
-        this.x = x + (Math.random() - 0.5) * 24;
-        this.y = y + (Math.random() - 0.5) * 24;
-        this.size = Math.random() * 3.5 + 1;
-        this.alpha = Math.random() * 0.6 + 0.4;
-        this.vx = (Math.random() - 0.5) * 0.6;
-        this.vy = (Math.random() - 0.5) * 0.6 - 0.3;
-        this.decay = Math.random() * 0.006 + 0.004;
+    class Sparkle {
+      constructor(x, y, opts = {}) {
+        const spread = opts.spread ?? 10;
+        this.x = x + (Math.random() - 0.5) * spread;
+        this.y = y + (Math.random() - 0.5) * spread;
+        this.size = Math.random() * 1.4 + 1.2;
+        this.baseAlpha = Math.random() * 0.3 + 0.7;
+        this.alpha = this.baseAlpha;
+        const vxBase = opts.vx ?? 0;
+        const vyBase = opts.vy ?? 0;
+        this.vx = vxBase + (Math.random() - 0.5) * 0.2;
+        this.vy = vyBase + (Math.random() - 0.5) * 0.2;
+        this.decay = Math.random() * 0.005 + 0.005;
         this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+        this.twinkleSpeed = Math.random() * 0.06 + 0.04;
+        this.twinklePhase = Math.random() * Math.PI * 2;
         this.rotation = Math.random() * Math.PI * 2;
-        this.isStar = Math.random() > 0.4;
       }
 
       update() {
         this.x += this.vx;
         this.y += this.vy;
-        this.alpha -= this.decay;
-        this.size *= 0.995;
-        this.rotation += 0.05;
+        this.vx *= 0.97;
+        this.vy *= 0.97;
+        this.baseAlpha -= this.decay;
+        this.twinklePhase += this.twinkleSpeed;
+        const flicker = 0.85 + Math.sin(this.twinklePhase) * 0.15;
+        this.alpha = Math.max(0, this.baseAlpha) * flicker;
       }
 
       drawStar(ctx, x, y, r) {
@@ -54,8 +63,8 @@ export const CursorSparkle = () => {
         ctx.beginPath();
         for (let i = 0; i < 4; i++) {
           const angle = (i / 4) * Math.PI * 2;
-          const long = r * 1.8;
-          const short = r * 0.4;
+          const long = r * 4.5;
+          const short = r * 0.12;
           ctx.lineTo(Math.cos(angle) * long, Math.sin(angle) * long);
           ctx.lineTo(
             Math.cos(angle + Math.PI / 4) * short,
@@ -69,28 +78,33 @@ export const CursorSparkle = () => {
 
       draw(ctx) {
         ctx.save();
-        ctx.globalAlpha = Math.max(0, this.alpha);
-        ctx.fillStyle = `rgba(${this.color}, ${this.alpha})`;
-        // 글로우 효과
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = `rgba(${this.color}, 0.8)`;
-        if (this.isStar) {
-          this.drawStar(ctx, this.x, this.y, this.size);
-        } else {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-          ctx.fill();
-        }
+        ctx.globalAlpha = Math.max(0, Math.min(1, this.alpha));
+        ctx.fillStyle = `rgba(${this.color}, 1)`;
+        ctx.shadowBlur = 4;
+        ctx.shadowColor = `rgba(${this.color}, 0.7)`;
+        this.drawStar(ctx, this.x, this.y, this.size);
         ctx.restore();
       }
     }
 
     const handleMouseMove = (e) => {
+      prevMouse.x = mouse.x;
+      prevMouse.y = mouse.y;
       mouse.x = e.clientX;
       mouse.y = e.clientY;
-      const count = Math.floor(Math.random() * 2) + 2;
+      const dx = mouse.x - prevMouse.x;
+      const dy = mouse.y - prevMouse.y;
+      const trailVx = -dx * 0.04;
+      const trailVy = -dy * 0.04;
+      const count = Math.random() < 0.5 ? 1 : 2;
       for (let i = 0; i < count; i++) {
-        particles.push(new Particle(mouse.x, mouse.y));
+        particles.push(
+          new Sparkle(mouse.x, mouse.y, {
+            vx: trailVx,
+            vy: trailVy,
+            spread: 8,
+          })
+        );
       }
     };
     window.addEventListener("mousemove", handleMouseMove);
@@ -98,7 +112,7 @@ export const CursorSparkle = () => {
     let animId;
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles = particles.filter((p) => p.alpha > 0.01);
+      particles = particles.filter((p) => p.baseAlpha > 0.01);
       particles.forEach((p) => {
         p.update();
         p.draw(ctx);
