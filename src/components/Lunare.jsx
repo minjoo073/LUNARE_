@@ -188,7 +188,7 @@ const processSteps = [
         <span className="[font-family:'Pretendard-Bold',Helvetica] font-bold text-[#666666]">
           &nbsp;
         </span>
-        <span className="[font-family:'Pretendard-Bold',Helvetica] font-bold text-[#9f6969]">
+        <span className="[font-family:'Pretendard-Bold',Helvetica] font-bold text-[#7e5a68]">
           기존 하이라이터 시장의 획일적인 광 표현 방식을 분석
         </span>
         <span className="text-[#666666]">
@@ -209,7 +209,8 @@ const processSteps = [
     titleWidth: "w-[233px]",
     body: (
       <>
-        달빛, 잔상, 물결, 부드러운 반사광을 핵심 키워드로 선정했습니다.
+        <span className="font-semibold text-[#7e5a68]">달빛</span>, 잔상, 물결,{" "}
+        <span className="font-semibold text-[#7e5a68]">부드러운 반사광</span>을 핵심 키워드로 선정했습니다.
         <br />
         브랜드 네이밍, 컬러 시스템, 비주얼 무드를 설계하여 일관된 브랜드
         아이덴티티를 구축했습니다.
@@ -227,7 +228,8 @@ const processSteps = [
       <>
         브랜딩 전략을 바탕으로 제품 비주얼과 웹사이트를 디자인했습니다.
         <br />
-        에디토리얼 스타일의 비주얼 콘텐츠를 활용하여 브랜드 무드를 직관적으로
+        에디토리얼 스타일의 비주얼 콘텐츠를 활용하여{" "}
+        <span className="font-semibold text-[#7e5a68]">브랜드 무드를 직관적으로</span>{" "}
         전달했습니다.
       </>
     ),
@@ -662,9 +664,6 @@ export const Lunare = () => {
               </div>
             </div>
           ))}
-          <div className="relative self-stretch [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-white text-[15px] tracking-[0] leading-[normal]">
-            Tool
-          </div>
         </div>
         <p className="absolute top-[642px] left-[538px] [font-family:'Pretendard-Regular',Helvetica] font-normal text-white text-sm tracking-[0.05em] leading-[normal] whitespace-nowrap">
           BRANDING · UIUX DESIGN · VISUAL DESIGN · PUBLISHING
@@ -759,7 +758,7 @@ export const Lunare = () => {
           <div className="relative w-[1072px] h-[78px] mr-[-2.00px]">
             <div className="absolute top-6 left-0 w-[194px] h-[29px] flex gap-5">
               <div className="w-[113px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#222222] text-[17px] tracking-[0] leading-[normal]">
-                SOLUTON
+                SOLUTION
               </div>
               <div className="mt-3.5 w-10" aria-hidden="true" style={{ borderTop: "0.5px dashed #aaaaaa" }} />
             </div>
@@ -807,11 +806,11 @@ export const Lunare = () => {
               <div
                 className={`absolute top-0 left-0 ${step.titleWrap} h-[63px] flex flex-col gap-[15px]`}
               >
-                <div className="w-[57px] h-[19px] [font-family:'Pretendard-Light',Helvetica] font-light text-[#aaaaaa] text-sm tracking-[0.08em] leading-[normal] whitespace-nowrap gsap-process-num">
+                <div className="w-[57px] h-[19px] [font-family:'Pretendard-Medium',Helvetica] font-medium text-[#7e5a68] text-[13px] tracking-[0.18em] uppercase leading-[normal] whitespace-nowrap gsap-process-num">
                   {step.step}
                 </div>
                 <div
-                  className="w-fit [font-family:'Pretendard-SemiBold',Helvetica] font-semibold text-[#1a1a1a] text-lg tracking-[0.04em] leading-[normal] whitespace-nowrap gsap-process-title"
+                  className="w-fit [font-family:'GFS_Didot-Regular',Helvetica] font-normal text-[#1a1a1a] text-[22px] tracking-[0.04em] leading-[normal] whitespace-nowrap gsap-process-title"
                 >
                   {step.title}
                 </div>
