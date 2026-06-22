@@ -501,12 +501,23 @@ const PORTFOLIO_BASE_WIDTH = 1440;
 const PORTFOLIO_BASE_HEIGHT = 16849;
 const PORTFOLIO_MAX_SCALE = 1920 / PORTFOLIO_BASE_WIDTH;
 
+// 세로 스크롤바를 *제외한* 실제 콘텐츠 폭. window.innerWidth 는 세로 스크롤바
+// 두께(윈도우 ~15~17px)를 포함하므로, 그 값으로 래퍼 폭을 잡으면 스크롤바 폭만큼
+// 가로 오버플로가 생겨 하단에 가로 스크롤바가 뜬다.
+function getViewportWidth() {
+  if (typeof window === "undefined") {
+    return PORTFOLIO_BASE_WIDTH;
+  }
+
+  return document.documentElement.clientWidth || window.innerWidth;
+}
+
 function getPortfolioScale() {
   if (typeof window === "undefined") {
     return 1;
   }
 
-  return Math.min(window.innerWidth / PORTFOLIO_BASE_WIDTH, PORTFOLIO_MAX_SCALE);
+  return Math.min(getViewportWidth() / PORTFOLIO_BASE_WIDTH, PORTFOLIO_MAX_SCALE);
 }
 
 function getIsNarrowViewport() {
@@ -514,7 +525,7 @@ function getIsNarrowViewport() {
     return false;
   }
 
-  return window.innerWidth <= 768;
+  return getViewportWidth() <= 768;
 }
 
 export const Lunare = () => {
